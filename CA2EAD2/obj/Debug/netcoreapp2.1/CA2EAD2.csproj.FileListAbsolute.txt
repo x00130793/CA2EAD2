@@ -1,0 +1,15 @@
+c:\users\x00130793\source\repos\CA2EAD2\CA2EAD2\bin\Debug\netcoreapp2.1\CA2EAD2.deps.json
+c:\users\x00130793\source\repos\CA2EAD2\CA2EAD2\bin\Debug\netcoreapp2.1\CA2EAD2.runtimeconfig.json
+c:\users\x00130793\source\repos\CA2EAD2\CA2EAD2\bin\Debug\netcoreapp2.1\CA2EAD2.runtimeconfig.dev.json
+c:\users\x00130793\source\repos\CA2EAD2\CA2EAD2\bin\Debug\netcoreapp2.1\CA2EAD2.dll
+c:\users\x00130793\source\repos\CA2EAD2\CA2EAD2\bin\Debug\netcoreapp2.1\CA2EAD2.pdb
+c:\users\x00130793\source\repos\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.csprojAssemblyReference.cache
+c:\users\x00130793\source\repos\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.csproj.CoreCompileInputs.cache
+c:\users\x00130793\source\repos\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.RazorAssemblyInfo.cache
+c:\users\x00130793\source\repos\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.RazorAssemblyInfo.cs
+c:\users\x00130793\source\repos\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+c:\users\x00130793\source\repos\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.AssemblyInfoInputs.cache
+c:\users\x00130793\source\repos\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.AssemblyInfo.cs
+c:\users\x00130793\source\repos\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.RazorTargetAssemblyInfo.cache
+c:\users\x00130793\source\repos\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.dll
+c:\users\x00130793\source\repos\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.pdb

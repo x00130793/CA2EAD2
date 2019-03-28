@@ -2,61 +2,124 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using CA2EAD2;
 
 namespace CA2EAD2.Controllers
 {
-    [Route("api/Movies")]
+    [Route("api/[controller]")]
+    [ApiController]
     public class MoviesController : ControllerBase
     {
-        List<Movie> movies;
+        private readonly MovieContext _context;
 
-        public MoviesController()
+        public MoviesController(MovieContext context)
         {
-            movies = new List<Movie>();
-            movies.Add(new Movie() { Id = 1, Title = "Inception", Genre = "Thriller", Year = "2010" });
-            movies.Add(new Movie() { Id = 2, Title = "The butterfly Effect", Genre = "Thriller", Year = "2004" });
-            movies.Add(new Movie() { Id = 3, Title = "Looper", Genre = "Thriller", Year = "2012" });
-            movies.Add(new Movie() { Id = 4, Title = "Pulp Fiction", Genre = "Crime", Year = "1994" });
+            _context = context;
         }
 
-        [HttpGet("all")]
-        // GET api/movies/all
-        public IEnumerable<Movie> GetAllMovies()
+        // GET: api/Movies
+        [HttpGet]
+        public IEnumerable<Movie> GetMovies()
         {
-            var allMovies = movies.OrderBy(m => m.Title);
-            return allMovies;
+            return _context.Movies;
         }
 
-        [HttpGet("title/{title}")]
-        //GET api/movies/title/"title"
-        public IActionResult GetTitle(String titleIn)
+        // GET: api/Movies/5
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetMovie([FromRoute] int id)
         {
-            //LINQ to find matching title
-            var title = movies.FirstOrDefault(t => t.Title.ToUpper() == titleIn.ToUpper());
-            if (title == null)
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var movie = await _context.Movies.FindAsync(id);
+
+            if (movie == null)
             {
                 return NotFound();
             }
-            return Ok(title);
+
+            return Ok(movie);
         }
 
-        [HttpGet("genre/{genre}")]
-        //GET api/movies/genre/"genre"
-        public IEnumerable<Movie> GetByGenre(String genreIn)
+        // PUT: api/Movies/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutMovie([FromRoute] int id, [FromBody] Movie movie)
         {
-            //LINQ to find movies by genre
-            var genre = movies.Where(g => g.Genre.ToUpper() == genreIn.ToUpper());
-            return genre;
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (id != movie.Id)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(movie).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!MovieExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
         }
 
-        [HttpGet("year/{year}")]
-        //GET api/movies/year/"year"
-        public IEnumerable<Movie> GetByYear(String yearIn)
+        // POST: api/Movies
+        [HttpPost]
+        public async Task<IActionResult> PostMovie([FromBody] Movie movie)
         {
-            //LINQ to find movies by genre
-            var year = movies.Where(y => y.Year.ToUpper() == yearIn.ToUpper());
-            return year;
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            _context.Movies.Add(movie);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetMovie", new { id = movie.Id }, movie);
+        }
+
+        // DELETE: api/Movies/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteMovie([FromRoute] int id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var movie = await _context.Movies.FindAsync(id);
+            if (movie == null)
+            {
+                return NotFound();
+            }
+
+            _context.Movies.Remove(movie);
+            await _context.SaveChangesAsync();
+
+            return Ok(movie);
+        }
+
+        private bool MovieExists(int id)
+        {
+            return _context.Movies.Any(e => e.Id == id);
         }
     }
 }

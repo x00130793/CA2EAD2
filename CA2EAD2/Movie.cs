@@ -18,6 +18,9 @@ namespace CA2EAD2
         public string Year { get; set; }
 
         [Required]
+        public string Description { get; set; }
+
+        [Required]
         public string Genre { get; set; }
 
     }

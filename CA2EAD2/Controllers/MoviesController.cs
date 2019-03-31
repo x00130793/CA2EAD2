@@ -13,7 +13,7 @@ namespace CA2EAD2.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
-        private readonly MovieContext _context;
+        private readonly MovieContext _context;      
 
         public MoviesController(MovieContext context)
         {
@@ -28,91 +28,21 @@ namespace CA2EAD2.Controllers
         }
 
         // GET: api/Movies/5
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetMovie([FromRoute] int id)
+        [HttpGet("{searchString}")]
+        public async Task<IActionResult> GetMovie(string searchString)
         {
+            
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var movie = await _context.Movies.FindAsync(id);
-
+            Movie[] movie = await _context.Movies.Where(e => (e.Title.Contains(searchString)) || (e.Year.Contains(searchString)) || (e.Genre.Contains(searchString))).ToArrayAsync();
+            
             if (movie == null)
             {
                 return NotFound();
             }
-
-            return Ok(movie);
-        }
-
-        // PUT: api/Movies/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutMovie([FromRoute] int id, [FromBody] Movie movie)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != movie.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(movie).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!MovieExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
-        // POST: api/Movies
-        [HttpPost]
-        public async Task<IActionResult> PostMovie([FromBody] Movie movie)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            _context.Movies.Add(movie);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetMovie", new { id = movie.Id }, movie);
-        }
-
-        // DELETE: api/Movies/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteMovie([FromRoute] int id)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            var movie = await _context.Movies.FindAsync(id);
-            if (movie == null)
-            {
-                return NotFound();
-            }
-
-            _context.Movies.Remove(movie);
-            await _context.SaveChangesAsync();
 
             return Ok(movie);
         }

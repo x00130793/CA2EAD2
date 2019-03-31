@@ -28,3 +28,33 @@ C:\Users\Adi\source\repos\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.RazorT
 C:\Users\Adi\source\repos\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.dll
 C:\Users\Adi\source\repos\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.pdb
 C:\Users\Adi\source\repos\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+\\COMPHOME\homedir$\X00130793\Desktop\CA2EAD2\CA2EAD2\bin\Debug\netcoreapp2.1\CA2EAD2.deps.json
+\\COMPHOME\homedir$\X00130793\Desktop\CA2EAD2\CA2EAD2\bin\Debug\netcoreapp2.1\CA2EAD2.runtimeconfig.json
+\\COMPHOME\homedir$\X00130793\Desktop\CA2EAD2\CA2EAD2\bin\Debug\netcoreapp2.1\CA2EAD2.runtimeconfig.dev.json
+\\COMPHOME\homedir$\X00130793\Desktop\CA2EAD2\CA2EAD2\bin\Debug\netcoreapp2.1\CA2EAD2.dll
+\\COMPHOME\homedir$\X00130793\Desktop\CA2EAD2\CA2EAD2\bin\Debug\netcoreapp2.1\CA2EAD2.pdb
+\\COMPHOME\homedir$\X00130793\Desktop\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.csprojAssemblyReference.cache
+\\COMPHOME\homedir$\X00130793\Desktop\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.csproj.CoreCompileInputs.cache
+\\COMPHOME\homedir$\X00130793\Desktop\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.RazorAssemblyInfo.cache
+\\COMPHOME\homedir$\X00130793\Desktop\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.RazorAssemblyInfo.cs
+\\COMPHOME\homedir$\X00130793\Desktop\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+\\COMPHOME\homedir$\X00130793\Desktop\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.AssemblyInfoInputs.cache
+\\COMPHOME\homedir$\X00130793\Desktop\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.AssemblyInfo.cs
+\\COMPHOME\homedir$\X00130793\Desktop\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.RazorTargetAssemblyInfo.cache
+\\COMPHOME\homedir$\X00130793\Desktop\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.dll
+\\COMPHOME\homedir$\X00130793\Desktop\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.pdb
+C:\Users\Adi\Desktop\ca2 29.03.19\CA2EAD2\CA2EAD2\bin\Debug\netcoreapp2.1\CA2EAD2.deps.json
+C:\Users\Adi\Desktop\ca2 29.03.19\CA2EAD2\CA2EAD2\bin\Debug\netcoreapp2.1\CA2EAD2.runtimeconfig.json
+C:\Users\Adi\Desktop\ca2 29.03.19\CA2EAD2\CA2EAD2\bin\Debug\netcoreapp2.1\CA2EAD2.runtimeconfig.dev.json
+C:\Users\Adi\Desktop\ca2 29.03.19\CA2EAD2\CA2EAD2\bin\Debug\netcoreapp2.1\CA2EAD2.dll
+C:\Users\Adi\Desktop\ca2 29.03.19\CA2EAD2\CA2EAD2\bin\Debug\netcoreapp2.1\CA2EAD2.pdb
+C:\Users\Adi\Desktop\ca2 29.03.19\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.csprojAssemblyReference.cache
+C:\Users\Adi\Desktop\ca2 29.03.19\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.csproj.CoreCompileInputs.cache
+C:\Users\Adi\Desktop\ca2 29.03.19\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.RazorAssemblyInfo.cache
+C:\Users\Adi\Desktop\ca2 29.03.19\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.RazorAssemblyInfo.cs
+C:\Users\Adi\Desktop\ca2 29.03.19\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\Adi\Desktop\ca2 29.03.19\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.AssemblyInfoInputs.cache
+C:\Users\Adi\Desktop\ca2 29.03.19\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.AssemblyInfo.cs
+C:\Users\Adi\Desktop\ca2 29.03.19\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.RazorTargetAssemblyInfo.cache
+C:\Users\Adi\Desktop\ca2 29.03.19\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.dll
+C:\Users\Adi\Desktop\ca2 29.03.19\CA2EAD2\CA2EAD2\obj\Debug\netcoreapp2.1\CA2EAD2.pdb

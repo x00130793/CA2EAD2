@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CA2EAD2;
+using System.Text.RegularExpressions;
 
 namespace CA2EAD2.Controllers
 {
@@ -37,14 +38,28 @@ namespace CA2EAD2.Controllers
                 return BadRequest(ModelState);
             }
 
-            Movie[] movie = await _context.Movies.Where(e => (e.Title.Contains(searchString)) || (e.Year.Contains(searchString)) || (e.Genre.Contains(searchString))).ToArrayAsync();
+            //Movie[] movie = await _context.Movies.Where(e => (e.Title.Contains(searchString)) || (e.Year.Contains(searchString)) || (e.Genre.Contains(searchString))).ToArrayAsync();
             
-            if (movie == null)
+            //if (movie == null)
+            //{
+            //    return NotFound();
+            //}
+
+            //Search method:
+            var moviesSearched = _context.Movies.Where(e => (e.Title.ToLower().Contains(searchString.ToLower())) || (e.Year.Contains(searchString)) || (e.Genre.ToLower().Contains(searchString.ToLower())));
+
+            if (!moviesSearched.Any())
             {
-                return NotFound();
+                // Separate name and year (if present)
+                String name = Regex.Replace(searchString, @"\d{4}", ""); // Name with out year
+                name = Regex.Replace(name, @"^\s+|\s+$", ""); // get rid of all extra spaces before/after name
+                String year = Regex.Match(searchString, @"\d{4}").Groups[0].ToString(); // year from the string
+                moviesSearched = _context.Movies.Where(j => j.Year.Equals(year))
+                                       .Where(e => (e.Title.ToLower().Contains(name.ToLower())) || e.Genre.ToLower().Contains(name.ToLower()));
+
             }
 
-            return Ok(movie);
+            return Ok(moviesSearched);
         }
 
         private bool MovieExists(int id)

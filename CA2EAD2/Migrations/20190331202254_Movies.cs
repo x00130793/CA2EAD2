@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CA2EAD2.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class Movies : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

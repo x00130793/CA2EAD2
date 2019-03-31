@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CA2EAD2.Migrations
 {
     [DbContext(typeof(MovieContext))]
-    [Migration("20190328165733_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20190331202254_Movies")]
+    partial class Movies
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

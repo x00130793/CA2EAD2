@@ -32,7 +32,7 @@ namespace CA2EAD2.Controllers
         [HttpGet("{searchString}")]
         public async Task<IActionResult> GetMovie(string searchString)
         {
-            
+            searchString = searchString.Replace("_", " ");
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
